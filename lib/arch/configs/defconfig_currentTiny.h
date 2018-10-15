@@ -21,7 +21,7 @@
 #endif
 
 /* utils */
-#define CONFIG_FIRMWARE_VERSION				"2018.1.10"
+#define CONFIG_FIRMWARE_VERSION				"2018.1.11-rc1"
 #define CONFIG_BoardSerial_BAUD_RATE 			9600
 
 #ifdef CONFIG_ACS712_SPARKFUN

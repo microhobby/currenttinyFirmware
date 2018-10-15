@@ -33,15 +33,3 @@
 	((voltage - CONFIG_ACS712_VREF) * CONFIG_ACS712_SENSE)
 
 #endif
-
-#ifdef CONFIG_ACS714_POLOLU
-#define CONFIG_ACS714_SENSE				185
-#define CONFIG_ACS714_OFFSET				509.953
-#define CONFIG_ACS714_SPAN				0.0671
-
-#define ACS714_CALC_SENSE_VOLTAGE(voltage, vin) \
-	((voltage * vin) / 1024)
-
-#endif
-
-

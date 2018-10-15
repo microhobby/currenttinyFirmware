@@ -23,13 +23,7 @@ void setup()
 }
 
 void loop() 
-{	
-	/* console */
-	/*acs714_pololu_read_avg(&currentSensor, 64);
-	console_clear_screen();
-	console_print_double(currentSensor.vout, 3);
-	console_print_double(currentSensor.current, 3);
-	delay(100);*/
+{
 
 	/* check for commands */
 	if (check_command()) {

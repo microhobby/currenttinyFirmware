@@ -38,18 +38,13 @@ void acs714_pololu_read_avg(acs714_pololu_data* data, unsigned int avg)
 	for (i = 0; i < avg; i++) {
 		/* read */
 		avg_sum = analogRead(data->vout_pin);
-		
-		/* calc with offsets */
-		/*current += (avg_sum - CONFIG_ACS714_OFFSET) * CONFIG_ACS714_SPAN;*/
 
 		/* calc normal */
 		vout = ((float)avg_sum / 1024.0) * (float)vin;
 		current += (vout - ((float)vin/2)) / 185.0;
-		//((185.0 * (float)vin) / 5000.0);
 	}
 
 	current = current / avg;
-	/*vout = ACS714_CALC_SENSE_VOLTAGE(avg_sum, vin);*/
 
 	data->vout = vout;
 	data->current = current;

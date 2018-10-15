@@ -1,0 +1,11 @@
+{
+	"terminal.integrated.env.linux": {
+		"PATH": "/home/castello/.platformio/penv/bin:/home/castello/.platformio/penv:/home/castello/tizen-studio/tools/ide/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin:/usr/lib/jvm/java-8-oracle/bin:/usr/lib/jvm/java-8-oracle/db/bin:/usr/lib/jvm/java-8-oracle/jre/bin",
+		"PLATFORMIO_CALLER": "vscode"
+	},
+	"files.associations": {
+		"acs712.h": "c",
+		"defconfig.h": "c",
+		"defconfig_currentmini.h": "c"
+	}
+}

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# SET FUSES TO WORK IN 16MHZ
+avrdude -v -pattiny85 -cusbasp -Pusb -U lfuse:w:0xC1:m -U hfuse:w:0xD4:m -U efuse:w:0xFF:m
+
+echo "Success?"

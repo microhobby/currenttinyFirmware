@@ -1,0 +1,5 @@
+#!/bin/bash
+
+avrdude -v -patmega328p -cusbasp -Pusb -Uflash:w:../.pioenvs/castellino/firmware.hex:i
+
+echo "Success?"

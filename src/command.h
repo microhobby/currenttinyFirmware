@@ -1,3 +1,11 @@
+/* SPDX-License-Identifier: GPL-3.0+ */
+/*
+ * Current Mini
+ * Commands implementations
+ *
+ * (C) Copyright 2018
+ * Matheus Castello <matheus@castello.eng.br>
+ */
 
 #include <Arduino.h>
 #include <board_core.h>

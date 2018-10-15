@@ -9,8 +9,8 @@
 #ifndef DEFCONFIGS
 #define DEFCONFIGS
 
-#ifdef CONFIG_BOARD_CURRENT_MINI
-#include <defconfig_currentMini.h>
+#ifdef CONFIG_BOARD_CURRENT_TINY
+#include <defconfig_currentTiny.h>
 #endif
 
 #endif

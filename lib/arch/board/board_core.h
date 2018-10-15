@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0+ */
 /*
- * Current Mini
+ * Current Tiny
  * Board Initiliazation global header
  *
  * (C) Copyright 2018
@@ -15,6 +15,6 @@
 void board_setup ();
 
 /* boards */
-#include <currentMini.h>
+#include <currentTiny.h>
 
 #endif

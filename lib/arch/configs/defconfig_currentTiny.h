@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0+ */
 /*
- * Current Mini DefConfigs
+ * Current Tiny DefConfigs
  *
  * (C) Copyright 2018
  * Matheus Castello <matheus@castello.eng.br>
@@ -14,7 +14,7 @@
 #define CONFIG_ACS714_POLOLU
 
 /* pins */
-#define CONFIG_CURRENT_MINI_VIN_PIN			A2
+#define CONFIG_CURRENT_TINY_VIN_PIN			A2
 #ifdef CONFIG_PINSCHER
 #define CONFIG_SERIAL_RX_PIN				2
 #define CONFIG_SERIAL_TX_PIN				1

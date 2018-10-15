@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0+ */
 /*
- * Current Mini
+ * Current Tiny
  * Commands implementations
  *
  * (C) Copyright 2018

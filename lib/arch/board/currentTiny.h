@@ -1,13 +1,13 @@
 /* SPDX-License-Identifier: GPL-3.0+ */
 /*
- * Current Mini
+ * Current Tiny
  * Board Initiliazation and config
  *
  * (C) Copyright 2018
  * Matheus Castello <matheus@castello.eng.br>
  */
 
-#ifdef CONFIG_BOARD_CURRENT_MINI
+#ifdef CONFIG_BOARD_CURRENT_TINY
 
 #include <defconfig.h>
 #include <Arduino.h>
@@ -29,7 +29,7 @@ void board_setup()
 	pinMode(13, OUTPUT);
 	digitalWrite(13, LOW);
 #endif
-	pinMode(CONFIG_CURRENT_MINI_VIN_PIN, INPUT);
+	pinMode(CONFIG_CURRENT_TINY_VIN_PIN, INPUT);
 
 	/* config BoardSerial */
 	BoardSerial.begin(CONFIG_BoardSerial_BAUD_RATE);

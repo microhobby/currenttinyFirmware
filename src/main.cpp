@@ -1,6 +1,6 @@
 /* SPDX-License-Identifier: GPL-3.0+ */
 /*
- * Current Mini
+ * Current Tiny
  * Main - setup - loop
  *
  * (C) Copyright 2018
@@ -19,7 +19,7 @@ void setup()
 	/* Board specific initialization */
 	board_setup();
 	/* set data */
-	currentSensor.vout_pin = CONFIG_CURRENT_MINI_VIN_PIN;
+	currentSensor.vout_pin = CONFIG_CURRENT_TINY_VIN_PIN;
 }
 
 void loop() 

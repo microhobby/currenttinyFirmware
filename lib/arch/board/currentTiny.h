@@ -29,7 +29,6 @@ void board_setup()
 	pinMode(13, OUTPUT);
 	digitalWrite(13, LOW);
 #endif
-	pinMode(CONFIG_CURRENT_TINY_VIN_PIN, INPUT);
 
 	/* config BoardSerial */
 	BoardSerial.begin(CONFIG_BoardSerial_BAUD_RATE);

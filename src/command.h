@@ -100,7 +100,7 @@ void execute_command()
 /* implement here cause platformIO is trash config for compiler */
 void flush_command()
 {
-	acs714_pololu_read_avg(&currentSensor, 64);
+	acs714_pololu_read_avg(&currentSensor, 10);
 	console_print_double(currentSensor.current, 5);
 }
 

@@ -31,5 +31,5 @@ void loop()
 	}
 
 	execute_command();
-	delay(10);
+	//delay(10);
 }

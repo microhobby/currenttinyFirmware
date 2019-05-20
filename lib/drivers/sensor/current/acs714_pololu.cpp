@@ -14,7 +14,11 @@ long acs714_pololu_read_vin()
 {
 	long result;
 
+#ifdef CONFIG_PINSCHER
+	ADMUX = _BV(MUX3) | _BV(MUX2);
+#else
 	ADMUX = _BV(REFS0) | _BV(MUX3) | _BV(MUX2) | _BV(MUX1);
+#endif
 	delay(2);
 	ADCSRA |= _BV(ADSC);
 
@@ -29,19 +33,22 @@ long acs714_pololu_read_vin()
 
 void acs714_pololu_read_avg(acs714_pololu_data* data, unsigned int avg)
 {
-	unsigned int i;
-	long vin = 0, avg_sum = 0;
-	double vout, current = 0.0;
+	unsigned int i, j;
+	long vin = 0, read_sum = 0;
+	double vout, current = 0.0, zeroCurrentVCC;
 
 	vin = acs714_pololu_read_vin();
 
 	for (i = 0; i < avg; i++) {
-		/* read */
-		avg_sum = analogRead(data->vout_pin);
-
-		/* calc normal */
-		vout = ((float)avg_sum / 1024.0) * (float)vin;
-		current += (vout - ((float)vin/2)) / 185.0;
+		for (j = 0; j < 5; j++) {
+			read_sum += analogRead(data->vout_pin);
+			/* wait 2 milliseconds to adc to settle */
+			delay(2);
+		}
+		zeroCurrentVCC = vin / 2;
+		vout = ((read_sum / 5) * vin) / 1024.0;
+		current += (vout - zeroCurrentVCC) / CONFIG_ACS714_SENSE;
+		read_sum = 0;
 	}
 
 	current = current / avg;

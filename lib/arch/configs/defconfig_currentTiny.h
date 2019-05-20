@@ -21,7 +21,7 @@
 #endif
 
 /* utils */
-#define CONFIG_FIRMWARE_VERSION				"2018.1.11-rc1"
+#define CONFIG_FIRMWARE_VERSION				"2019.5.18-rc1"
 #define CONFIG_BoardSerial_BAUD_RATE 			9600
 
 #ifdef CONFIG_ACS712_SPARKFUN
@@ -32,4 +32,8 @@
 #define ACS712_CALC_CURRENT(voltage) \
 	((voltage - CONFIG_ACS712_VREF) * CONFIG_ACS712_SENSE)
 
+#endif
+
+#ifdef CONFIG_ACS714_POLOLU
+#define CONFIG_ACS714_SENSE				66.0
 #endif
